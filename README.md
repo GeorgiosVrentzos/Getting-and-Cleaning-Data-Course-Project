@@ -1,10 +1,31 @@
 Getting and Cleaning Data Course Project
 ========================================
-This file describes how run_analysis.R script works.
-* First, unzip the data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and rename the folder with "data".
-* Make sure the folder "data" and the run_analysis.R script are both in the current working directory.
-* Second, use source("run_analysis.R") command in RStudio. 
-* Third, you will find two output files are generated in the current working directory:
-  - merged_data.txt (7.9 Mb): it contains a data frame called cleanedData with 10299*68 dimension.
-  - data_with_means.txt (220 Kb): it contains a data frame called result with 180*68 dimension.
-* Finally, use data <- read.table("data_with_means.txt") command in RStudio to read the file. Since we are required to get the average of each variable for each activity and each subject, and there are 6 activities in total and 30 subjects in total, we have 180 rows with all combinations for each of the 66 features. 
+ReadMe
+========================================
+
+FILES 
+
+* run_analysis.R
+* Readme.md
+* CodeBook.md
+
+Instructions
+
+* Input -> Download the data set from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+* Analysis -> Run "run_analysis.R" scipt
+* Output -> Having executed the script, two cleaned data sets will be prodeced and saved within the working directory.  
+  * the "first_data_set_merged.txt"
+  * and the "second_data_set_average.txt" which is a tidy data set with the average of each variable for each activity and each subject
+
+Description
+Run_analysis.R script does the following:
+  merges data from a number of .txt files that then produces a cleaned data.
+
+
+  1. It then reads all required .txt using the read.table().
+  2. It merges the different data sets based on  "activity_id"'s and "subject_id"'s using the rbind().
+  3. It extracts only the measurements on the mean and standard deviation for each measurement using the gsub().
+  4. Appropriately labels the new data set with descriptive variable names using cbind() and write.table().
+  5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject using the matrix(), as.data.frame(),sort(),col.means() and write.table().
+
+   
