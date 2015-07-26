@@ -14,19 +14,19 @@ Purpose
 =================================================
 The purpose of this project is to demonstrate the ability to collect, work with, and clean a data set. The goal is to prepare a tidy data set following the below steps.  
 
-    Downloaded the data set from (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
-    Unzipped the data set into my chosen working directory
-    Loaded test and training data sets into data frames
-    Loaded source variable names for test and training data sets
-    Loaded activity labels
-    Merge test and training data frames using rbind
-    Paired down the data frames to only include the mean and standard deviation variables
-    Replaced activity IDs with the activity labels for readability
-    Produce one data frame containing the subjects, measurements and activities
-    Produced "first_data_set_merged.txt" with the combined data frame 
-    Created another data set using the data.table library to easily group the tidy data by subject and activity
-    Then applied the mean and standard deviation calculations across the groups
-    Produced "second_data_set_average.txt" as the second expected output
+* Download the data set from (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
+* Unzip the data set into my chosen working directory
+* Loade test and training data sets into data frames
+* Loade source variable names for test and training data sets
+* Loade activity labels
+* Merge test and training data frames using rbind
+* Paired down the data frames to only include the mean and standard deviation variables
+* Replace activity IDs with the activity labels for readability
+* Produce one data frame containing the subjects, measurements and activities
+* Produce "first_data_set_merged.txt" with the combined data frame 
+* Created another data set using the data.table library to easily group the tidy data by subject and activity
+* Apply the mean and standard deviation calculations across the groups
+* Produce "second_data_set_average.txt" as the second expected output
 
 Please refer to run_analysis.R for implementation details.
 
